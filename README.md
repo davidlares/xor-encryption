@@ -8,7 +8,15 @@ Traffic encryption is a mechanism to prevent traffic sniffers or IP sensors. It 
 
 2. The behavior-based (anomalies) is used for studying IPS and the network itself. The IPS will learn the protocol types and packet rates passing through the sensor, the records can be stored in a database and also can detect false positives based on the average traffic expected and recorded.
 
-## How it works
+## Why XOR
+
+Here are three simple reasons for it.
+
+1. Enterprise networks with decryption devices that can terminate and clear your attempt through IP sensors
+2. You will have E2E shell faces, if the shell faces the IPS server, it won't have any added value.
+3. Modern firewalls can terminate SSH or SSL encryption for inspection purposes
+
+### How it works
 
 In a few words, the script will generate a random key used for the encryption with a 1kb length.
 
@@ -18,7 +26,7 @@ the encryption function will split the message and the XOR key in a tuple format
 
 After this, it performs `exclusive XOR` on them, it will merge the result on `ASCII` for a later `join`.
 
-## Run
+### Run
 
 Just: `python xor.py`
 
