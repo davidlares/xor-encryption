@@ -1,4 +1,4 @@
-# XOR Encryption
+## XOR Encryption
 
 The XOR encryption is used in general for masking data payloads. This script generates a random text key and processes it for a later XOR encryption. This is widely used in corporate or private networks that use traffic encryption.
 
